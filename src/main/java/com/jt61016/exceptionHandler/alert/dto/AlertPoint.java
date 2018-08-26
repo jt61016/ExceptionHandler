@@ -44,6 +44,19 @@ public class AlertPoint {
      */
     private String bussinessType;
 
+
+    public AlertPoint() {
+    }
+
+    public AlertPoint(String occurredClass, String occurredMethod,
+                      String exceptionType, String exceptionMessage, AlertTypeEnum alertTypeEnum) {
+        this.occurredClass = occurredClass;
+        this.occurredMethod = occurredMethod;
+        this.exceptionType = exceptionType;
+        this.exceptionMessage = exceptionMessage;
+        this.alertTypeEnum = alertTypeEnum;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
