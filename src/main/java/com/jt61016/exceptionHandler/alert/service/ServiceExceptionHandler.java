@@ -54,7 +54,6 @@ public class ServiceExceptionHandler {
         }
         String errorStack = Throwables.getStackTraceAsString(throwable);
         log.warn("出错的方法定义: {}\n 实际入参:({})\n 详细错误:{}", joinPoint.toLongString(), inputParam, errorStack);
-        System.out.println("出错的方法定义: " + joinPoint.toLongString() + "\n 实际入参:("+ inputParam + ")\n 详细错误:" + errorStack);
 
         collectException(joinPoint, throwable);
     }
